@@ -85,6 +85,8 @@ The directory “/member” with the file “john.txt” is still there, both on
 #### Conclusion
 To persist changes done to the container we can map a named volume on the host to a directory in the container, and changes made to that directory will persist between container stops, starts and also deletions.
 
+***
+
 ## Mount a host directory as a data volume
 You can also mount a specific directory on the host to a directory in the container
 Run:
