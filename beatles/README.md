@@ -24,15 +24,17 @@ Inspection of container gives:
 “Destination”-directory is located inside the running container
 
 ### Persistence test
-Start container
-Create file /members/john.txt containing text “John Lennon”
-Stop container
-Start container
-Login to the container
-The directory “/members and file in it “john.txt” that was added before is still left within the container. The host directory “"/var/lib/docker/volumes/a24edb63b...e57c/_data” also is still there, and it contains the file “john.txt”
+1. Run/Start container 
+2. Login to the container and create a file in directory "/members". Name the file john.txt and add text “John Lennon” to it.
+3. Stop container
+4. Start container
+5. Login to the container
+6. The directory “/members and file in it “john.txt” that was added before is still left within the container. The host directory "/var/lib/docker/volumes/a24edb63b...e57c/_data" also is still there, and it contains the file “john.txt”
 
 If I delete the container and again run:
+```shell
 $ docker run -it --name beatles -v /members centos:7
+```
 The directory “member” is created in the container and is mapped to an new unnamed data volume on the host. There is no file “john.txt” in it and neither in the member directory in the container. The directory “members” and the file “john.txt”  still exists in a “dangling” volume on the host.
 
 Conclusion: To persist changes done to the container we can map a data volume (unnamed) on the host to a directory in the container, and changes made to that directory will persist between container stops and starts. They will no persist if the container is deleted.
