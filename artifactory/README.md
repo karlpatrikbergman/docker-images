@@ -5,6 +5,8 @@ seems to work fine. After logging in to the web gui I can see the
 pre-configured Docker registries. Any changes I make such as adding
 users, groups, perminssions etc will not be persisted though.
 
+***
+
 ## Running Artifactory as docker container and mounting unnamed data volumes
 Again everything seems fine. After logging in I see the pre-configured
 docker registries.  
