@@ -39,7 +39,7 @@ The directory “/member” is created in the container and is mapped to an new 
 
 #### Conclusion
 To persist changes done to the container we can map a data volume (unnamed) on the host to a directory in the container, and changes made to that directory will persist between container stops and starts. They will no persist if the container is deleted.
-
+---
 ## Mount a named data volume
 The name of the volume in the example above is long and hard to recognize. 
 If you instead run:
