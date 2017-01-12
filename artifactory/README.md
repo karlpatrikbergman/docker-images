@@ -18,5 +18,14 @@ docker registries.
 
 If I delete the container the changes I made will not be persisted.
 
+## Running Artifactory as docker container and mounting named data volumes
+Yet again I can see pre-configured docker registries.
+
+### Persistence test
+1. Login to Artifactory as admin via web gui
+2. Add test user "polly"
+3. Stop, delete, and create/run the Artifactory docker container
+4. Login to Artifactory again
+5. The added user is still there (and my trial license is still active)
 
 
