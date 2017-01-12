@@ -37,7 +37,8 @@ $ docker run -it --name beatles -v /members centos:7
 ```
 The directory “/member” is created in the container and is mapped to an new unnamed data volume on the host. There is no file “john.txt” in the the data volume on the host and neither in the "/member" directory in the container. The directory “/members” and the file “john.txt”  still exists in a “dangling” volume on the host.
 
-Conclusion: To persist changes done to the container we can map a data volume (unnamed) on the host to a directory in the container, and changes made to that directory will persist between container stops and starts. They will no persist if the container is deleted.
+#### Conclusion
+To persist changes done to the container we can map a data volume (unnamed) on the host to a directory in the container, and changes made to that directory will persist between container stops and starts. They will no persist if the container is deleted.
 
 ## Mount a named data volume
 The name of the volume in the example above is long and hard to recognize. 
@@ -78,7 +79,8 @@ $ docker run -it --name beatles -v members:/members centos:7
 ```
 The directory “/member” with the file “john.txt” is still there, both on the host and in the container.
 
-Conclusion: To persist changes done to the container we can map a named volume on the host to a directory in the container, and changes made to that directory will persist between container stops, starts and also deletions.
+#### Conclusion
+To persist changes done to the container we can map a named volume on the host to a directory in the container, and changes made to that directory will persist between container stops, starts and also deletions.
 
 ## Mount a host directory as a data volume
 You can also mount a specific directory on the host to a directory in the container
