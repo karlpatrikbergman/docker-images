@@ -23,7 +23,7 @@ Inspection of container gives:
 “Source”-directory is located on the docker host machine
 “Destination”-directory is located inside the running container
 
-Persistence test:
+### Persistence test
 Start container
 Create file /members/john.txt containing text “John Lennon”
 Stop container
