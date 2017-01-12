@@ -1,0 +1,40 @@
+Credits to: http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers
+
+1. Build custom jenkins image
+$ docker build -t patrik/jenkins .
+
+# 2. Create a named data volume container
+docker create -v /var/jenkins_home --name jenkins-dv jenkins:alpine
+
+This command uses the ‘/var/jenkins_home’ directory volume as per the official
+image and provides a name ‘jenkins-dv’ to identify the data volume container.
+
+To use the data volume container with an image you use the ‘–volumes-from’
+flag to mount the ‘/var/jenkins_home’ volume in another container
+
+3. Run jenkins container (using previously created data volume)
+$ docker run --privileged -d -p 8080:8080 --volumes-from jenkins-dv --name custom-jenkins patrik/jenkins
+
+4. Retrieve jenkins password
+$ docker exec -it custom-jenkins /bin/bash
+$ cat /var/jenkins_home/secrets/initialAdminPassword
+
+Copy password
+
+$ exit
+
+5. Login to Jenkins web gui
+Go to jenkins home page at http://localhost:8080
+Login with password copied in 4
+
+6. I chose to install recommended plugins. I'll try to automate this later
+
+7. Create a new user 'admin' and password 'password'
+
+8. List installed plugins:
+$ JENKINS_HOST=admin:password@localhost:8080
+$ curl -sSL "http://$JENKINS_HOST/pluginManager/api/xml?depth=1&xpath=/*/*/shortName|/*/*/version&wrapper=plugins" | perl -pe 's/.*?<shortName>([\w-]+).*?<version>([^<]+)()(<\/\w+>)+/\1 \2\n/g'|sed 's/ /:/'
+
+
+9. View plugins in web gui, got to
+http://localhost:8080/pluginManager/installed
