@@ -4,7 +4,7 @@ Run:
 ```shell
 $ docker run -it --name beatles -v /members centos:7
 ```
-This command will create and run a container named “beatles”. Inside the running container a directory “/members” will be created. 
+This command will create and run a container named “beatles”. Inside the running container a directory “/members” will be created. It will be mapped to a data volume on the host (with docker generated name).
 
 Inspection of container gives:
 ```json
