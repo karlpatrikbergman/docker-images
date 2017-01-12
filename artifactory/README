@@ -1,0 +1,13 @@
+RUN ARTIFACTORY AS DOCKER CONTAINER WITHOUT MOUNTING
+    When I run Artifactory as docker container without mounting everything
+    seems to work fine. After logging in to the web gui I can see the
+    pre-configured Docker registries. Any changes I make such as adding
+    users, groups, perminssions etc will not be persisted though.
+
+
+
+3. Running Artifactory as docker container and mounting named data volumes
+
+RUN ARTIFACTYORY AS DOCKER CONTAINER MOUNTING HOST DIRECTORIES
+
+
