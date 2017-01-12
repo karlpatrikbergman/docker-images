@@ -7,7 +7,7 @@ users, groups, perminssions etc will not be persisted though.
 
 ## Running Artifactory as docker container and mounting unnamed data volumes
 Again everything seems fine. After logging in I see the pre-configured
-docker regitries.  
+docker registries.  
 
 ### Persitence test
 1. Login to Artifactory as admin via web gui
