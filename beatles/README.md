@@ -7,6 +7,7 @@ $ docker run -it --name beatles -v /members centos:7
 This command will create and run a container named “beatles”. Inside the running container a directory called “members” will be created. 
 
 Inspection of container gives:
+```json
  "Mounts": [
             {
                 "Name": "a24edb63b329d30244deafb6036488231f5dd60c8f2...7c",
@@ -18,7 +19,7 @@ Inspection of container gives:
                 "Propagation": ""
             }
         ],
-
+```
 “Source”-directory is located on the docker host machine
 “Destination”-directory is located inside the running container
 
