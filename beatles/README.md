@@ -48,7 +48,7 @@ If you instead run:
 ```shell
 $ docker run -it --name beatles -v members:/members centos:7
 ```
-where host-dir "members" has no leading slash (/) the volume on the host will reside amongst the other “anonymous” docker volumes, and it will have the name “members”. Quote from docker documentation: “[...] Docker creates a named volume by that name”
+where host-dir "members" has no leading slash (/) the volume on the host will reside amongst the other “anonymous” docker volumes, and it will have the name “members”. Quote from docker documentation: *“[...] Docker creates a named volume by that name”*
 
 Inspection of container gives:
 ```json
