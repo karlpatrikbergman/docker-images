@@ -18,6 +18,8 @@ docker registries.
 
 If I delete the container the changes I made will not be persisted.
 
+***
+
 ## Running Artifactory as docker container and mounting named data volumes
 Yet again I can see pre-configured docker registries.
 
