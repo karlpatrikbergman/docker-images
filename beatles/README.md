@@ -29,7 +29,7 @@ Inspection of container gives:
 3. Stop container
 4. Start container
 5. Login to the container
-6. The directory “/members" in the container is still there as is the file “john.txt”. The host directory "/var/lib/docker/volumes/a24edb63b...e57c/_data" also is still there, and it contains the file “john.txt”
+6. The directory “/members" in the container is still there as is the file “john.txt”. The host directory "/var/lib/docker/volumes/a24edb63b...e57c/_data" also is still there, and it contains the file “john.txt”.
 
 If I delete the container and again run:
 ```shell
