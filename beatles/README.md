@@ -65,7 +65,7 @@ Inspection of container gives:
     }
 ],
 ```
-“Source”-directory is located on the docker host machine and has been given the name "members"
+“Source”-directory is located on the docker host machine and has been given the name "members"  
 “Destination”-directory is located inside the running container
 
 ### Persistence test
