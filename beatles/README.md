@@ -88,7 +88,8 @@ To persist changes done to the container we can map a named volume on the host t
 ***
 
 ## Mount a host directory as a data volume
-You can also mount a specific directory on the host to a directory in the container
+You can also mount a specific directory on the host to a directory in the container.  
+
 Run:
 ```shell
 $ docker run -it --name beatles -v ${PWD}/members:/members centos:7
