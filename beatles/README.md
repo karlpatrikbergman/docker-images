@@ -20,7 +20,7 @@ Inspection of container gives:
             }
         ],
 ```
-“Source”-directory is located on the docker host machine
+“Source”-directory is located on the docker host machine  
 “Destination”-directory is located inside the running container
 
 ### Persistence test
