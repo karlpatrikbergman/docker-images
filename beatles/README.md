@@ -1,7 +1,9 @@
 # Docker volume test
 ## Mount a data volume without specifying volume name
 Run:
+```shell
 $ docker run -it --name beatles -v /members centos:7
+```
 This command will create and run a container named “beatles”. Inside the running container a directory called “members” will be created. 
 
 Inspection of container gives:
