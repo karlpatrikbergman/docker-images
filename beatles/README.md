@@ -126,6 +126,16 @@ The directory “/member” with the file “john.txt” is still there, both on
 
 ## Mount a host directory as a data volume when directory already exists in containers image
 https://docs.docker.com/engine/tutorials/dockervolumes/  
-*If the path /webapp already exists inside the container’s image, the /src/webapp mount overlays but does not remove the pre-existing content. Once the mount is removed, the content is accessible again. This is consistent with the expected behavior of the mount command.*
-1. 
+*If the path /webapp already exists inside the container’s image, the /src/webapp mount overlays but does not remove the pre-existing content. Once the mount is removed, the content is accessible again. This is consistent with the expected behavior of the mount command.*  
+
+### Overlay test
+1. Build an image "beatles_img" from a Dockerfile that has instructions for creating a directory "/members" and adding a file "ringo.txt" with the content "Ringo Star"
+2. Create/run a container named "beatles_ringo"  from image "beatles_img" and verify that "/members/ringo.txt" exists
+3. Stop and delete "beatles_ringo"
+4. Create a directory "members" on the host, and create a file "john.txt" in it with the content "John Lennon"
+4. Run:  
+```shell
+docker run -it --name beatles -v ${PWD}/members:/members beatles_image /bin/bash
+```
+
 
