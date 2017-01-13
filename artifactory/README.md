@@ -32,4 +32,7 @@ Yet again I can see pre-configured docker registries.
 4. Login to Artifactory again
 5. The added user is still there (and my trial license is still active)
 
-
+## Running Artifactory as docker container an mounting host directories
+No I run into trouble it seems. When I log in to Artifactory via the
+web gui I can't see any docker registries. Is this a bud or have I
+missed something?
