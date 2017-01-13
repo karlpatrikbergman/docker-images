@@ -114,7 +114,7 @@ Inspection of container gives:
 3. Stop container
 4. Start container
 5. Login to the container
-6. The directory “/members" in the container is still there as is the file “john.txt”. The mounted host directory “/<pwd>/members/” also is still there, as is the file “john.txt”
+6. The directory “/members" in the container is still there as is the file “john.txt”. The mounted host directory “<pwd>/members/” also is still there, as is the file “john.txt”
 
 If I delete the container and again run (from the same directory as before)
 ```shell
