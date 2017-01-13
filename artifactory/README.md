@@ -40,4 +40,8 @@ be persisted.
 ## Running Artifactory as docker container an mounting host directories
 Now I run into trouble it seems. When I log in to Artifactory via the
 web gui I can't see any docker registries. Is this a bug or have I
-missed something?
+missed something?  
+
+What I wanted to do here was to add a custom certificate to docker registries
+run by Artifactory as described here:  
+https://docs.docker.com/engine/security/certificates/
