@@ -120,4 +120,12 @@ If I delete the container and again run (from the same directory as before)
 ```shell
 $ docker run -it --name beatles -v ${PWD}/members:/members centos:7
 ```
-The directory “/member” with the file “john.txt” is still there, both on the host and in the container.
+The directory “/member” with the file “john.txt” is still there, both on the host and in the container.  
+
+***
+
+## Mount a host directory as a data volume when directory already exists in containers image
+https://docs.docker.com/engine/tutorials/dockervolumes/  
+*If the path /webapp already exists inside the container’s image, the /src/webapp mount overlays but does not remove the pre-existing content. Once the mount is removed, the content is accessible again. This is consistent with the expected behavior of the mount command.*
+1. 
+
