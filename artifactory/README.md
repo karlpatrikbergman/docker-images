@@ -39,5 +39,5 @@ be persisted.
 
 ## Running Artifactory as docker container an mounting host directories
 Now I run into trouble it seems. When I log in to Artifactory via the
-web gui I can't see any docker registries. Is this a bud or have I
+web gui I can't see any docker registries. Is this a bug or have I
 missed something?
