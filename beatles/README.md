@@ -88,7 +88,8 @@ To persist changes done to the container we can map a named volume on the host t
 ***
 
 ## Mount a host directory as a data volume
-You can also mount a specific directory on the host to a directory in the container. To do that run:
+You can also mount a specific directory on the host to a directory in the container. To do that create a 
+directory on the host called "members", and from the same level, run:
 ```shell
 $ docker run -it --name beatles -v ${PWD}/members:/members centos:7
 ```
@@ -104,4 +105,19 @@ Inspection of container gives:
     }
 ]
 ```
-The same as in the example “Mount a host directory as a data volume” is true in this case, stopping, deleting and running/starting the container will result in the directory “/members” and the file “john.txt still being there, both on the host and in the container.
+“Source”-directory is located on the docker host machine in the directory where the docker command was run  
+“Destination”-directory is located inside the running container
+
+### Persistence test
+1. Run/Start container 
+2. Login to the container and create a file in directory "/members". Name the file john.txt and add text “John Lennon” to it.
+3. Stop container
+4. Start container
+5. Login to the container
+6. The directory “/members" in the container is still there as is the file “john.txt”. The mounted host directory “/<pwd>/members/” also is still there, as is the file “john.txt”
+
+If I delete the container and again run (from the same directory as before)
+```shell
+$ docker run -it --name beatles -v ${PWD}/members:/members centos:7
+```
+The directory “/member” with the file “john.txt” is still there, both on the host and in the container.

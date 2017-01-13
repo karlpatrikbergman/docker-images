@@ -1,4 +1,4 @@
 FROM centos:7
 RUN mkdir /members
-RUN echo John Lennon > /members/john.txt
+RUN echo Ringo Starr > /members/ringo.txt
 CMD /bin/bash
