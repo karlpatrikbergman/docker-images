@@ -139,5 +139,5 @@ https://docs.docker.com/engine/tutorials/dockervolumes/
 $ docker run -it --name beatles -v ${PWD}/members:/members beatles_image /bin/bash
 ```
 
-When I enter the container and to to directory "/members" only the file "john.txt" is visible. The file "ring.txt" that came with the docker image "beatles_img" is not.
+When I enter the container and got to to directory "/members" only the file "john.txt" is visible. The file "ring.txt" that came with the docker image "beatles_img" is not.
 
