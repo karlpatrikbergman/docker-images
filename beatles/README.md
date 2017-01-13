@@ -132,11 +132,12 @@ https://docs.docker.com/engine/tutorials/dockervolumes/
 ### Overlay test
 1. Build an image "beatles_img" from a Dockerfile that has instructions for creating a directory "/members" and adding a file "ringo.txt" with the content "Ringo Star"
 2. Create/run a container named "beatles_ringo"  from image "beatles_img" and verify that "/members/ringo.txt" exists
-3. Stop and delete "beatles_ringo"
+3. Stop and delete container "beatles_ringo"
 4. Create a directory "members" on the host, and create a file "john.txt" in it with the content "John Lennon"
-4. Run:  
+4. From the same level, run:  
 ```shell
-docker run -it --name beatles -v ${PWD}/members:/members beatles_image /bin/bash
+$ docker run -it --name beatles -v ${PWD}/members:/members beatles_image /bin/bash
 ```
 
+When I enter the container and to to directory "/members" only the file "john.txt" is visible. The file "ring.txt" that came with the docker image "beatles_img" is not.
 
