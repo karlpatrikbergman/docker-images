@@ -32,11 +32,11 @@ $ docker inspect beatles | grep Mounts -A 11
 2. Login to the container and create a file in directory "/members". Name the file john.txt and add text “John Lennon” to it.
 ```shell
 $ docker exec -it beatles bin/bash
-> echo "John Lennon" > members/john.txt
+$ echo "John Lennon" > members/john.txt
 ```
 3. Logout and stop container
 ```shell
-> exit
+$ exit
 $ docker stop beatles
 ```
 4. Start container
@@ -49,7 +49,7 @@ $ docker exec -it beatles bin/bash
 ```
 6. The directory “/members" in the container is still there as is the file “john.txt”. The host directory "/var/lib/docker/volumes/a24edb63b...e57c/_data" also is still there, and it contains the file “john.txt”.
 ```shell
-> cat members/john.txt 
+$ cat members/john.txt 
 John Lennon
 ```
 ```shell
@@ -73,7 +73,7 @@ There is no file “john.txt” in the the data volume on the host and neither i
 The directory “/members” and the file “john.txt”  still exists in a “dangling” volume on the host.
 ```shell
 $ sudo su -
-> ls /var/lib/docker/volumes/a24edb63b...e57c/_data
+$ ls /var/lib/docker/volumes/a24edb63b...e57c/_data
 drwxr-xr-x 2 root root 22 May 18 09:05 ./
 drwxr-xr-x 3 root root 19 May 18 09:02 ../
 -rw-r--r-- 1 root root 12 May 18 09:05 john.txt
